@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=vietnamese" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=vietnamese" rel="stylesheet"> 
   <link href="{{asset('/css/styles.css')}}" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -23,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#homepage"></a>
+      <a class="navbar-brand" href="#homepage"><img src="{{asset('imgs/logo.png')}}"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -40,7 +41,8 @@
 <div id="particles-js">
 <div class="text-center page-header-title">
   <h1>IMAS</h1> 
-  <p>International Mathematics Assesments for Schools</p> 
+  <h4>International Mathematics Assesments for Schools</h4> 
+  <p>Dành cho học sinh từ lớp 3 đến lớp 8.</p>
  
 </div>
  </div>
@@ -54,7 +56,7 @@
      
       <p><strong>Kỳ thi đánh giá năng lực tư duy Toán học quốc tế - IMAS (International mathematics
 assessments for school)</strong> là kỳ thi đánh giá năng lực tư duy Toán học bằng tiếng Anh dành
-riêng cho học sinh Tiểu học và Trung học cơ sở. Bài thi đánh giá tư duy Toán toàn diện trên
+riêng cho <strong>học sinh Tiểu học và Trung học cơ sở</strong>. Bài thi đánh giá tư duy Toán toàn diện trên
 3 góc độ: Hiểu kiến thức, Áp dụng thực tế và Năng lực lập luận trên nền tảng tiếng Anh.<br>
 Kỳ thi sử dụng bài thi theo chuẩn quốc tế do Ủy ban điều hành IMAS quốc tế biên soạn.
 Ban tổ chức và điều hành IMAS bao gồm đại diện các hiệp hội Toán học, các trường Đại
@@ -121,7 +123,7 @@ của bài thi. Thí sinh được chủ động trong việc đánh giá khả 
           </tr>
            <tr>
             <td align="left"><strong>Hạn nhận đăng ký</strong></td>
-            <td>30/09/2017</td>
+            <td>10/10/2017</td>
             <td align="left">Hà Nội</td>
           </tr>
            <tr>
@@ -169,9 +171,9 @@ khó của các câu hỏi được phân bổ như sau:</p>
         <div class="panel-footer">
            <table class="table table-bordered yellow-heading">
         <thead>
-        <th>Câu hỏi</th>
-        <th text-align="center">Hình thức đề bài</th>
-        <th>Điểm số</th>
+        <th width="20%">Câu hỏi</th>
+        <th text-align="center" width="40%">Hình thức đề bài</th>
+        <th width="40%">Điểm số</th>
         </thead>
         <tbody>
           <tr>
@@ -210,9 +212,9 @@ Có tất cả 15 câu hỏi:</p>
         </div>
         <div class="panel-footer">   <table class="table table-bordered yellow-heading">
         <thead>
-        <th>Câu hỏi</th>
-        <th text-align="center">Hình thức đề bài</th>
-        <th>Điểm số</th>
+        <th width="20%">Câu hỏi</th>
+        <th text-align="center" width="40%">Hình thức đề bài</th>
+        <th width="40%">Điểm số</th>
         </thead>
         <tbody>
           <tr>
@@ -240,7 +242,26 @@ hoàn thành vẫn được cho điểm thành phần</td>
     </div>  
  
   </div>
-  
+   <h2>Tải đề thi các năm</h2><br>
+  <div class="row" id="examstructure">
+    <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+    <a href="{{asset('/dethi/IMAS_Junior.zip')}}">
+      <button class="btn btn-success btn-flat">
+        <span class="glyphicon glyphicon-save"></span> Cấp độ 1 (Junior)
+      </button>
+      </a>
+      <a href="{{asset('/dethi/IMAS_Middle.zip')}}">
+      <button class="btn btn-success btn-flat">
+        <span class="glyphicon glyphicon-save"></span> Cấp độ 2 (Middle Primary)
+      </button>
+      </a>
+      <a href="{{asset('/dethi/IMAS_Upper.zip')}}">
+      <button class="btn btn-success btn-flat">
+        <span class="glyphicon glyphicon-save"></span> Cấp độ 3 (Upper Primary)
+      </button>
+      </a>
+    </div>
+  </div>
   
 </div>
 
