@@ -10,13 +10,14 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=vietnamese" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=vietnamese" rel="stylesheet"> 
+  <link href="{{asset('css/animate.css')}}" rel="stylesheet" type="text/css">
   <link href="{{asset('/css/styles.css')}}" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  </head> 
 <body id="homepage" data-spy="scroll" data-target=".navbar" data-offset="100">
 
-<nav class="navbar navbar-default" id="masthead">
+<nav class="navbar navbar-default affix-top" id="masthead">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -31,7 +32,8 @@
         <li><a href="#about">Giới thiệu</a></li>
         <li><a href="#purposes">Mục đích</a></li>
         <li><a href="#location">Thời gian</a></li>
-        <li><a href="#exam">Đề thi</a></li>
+        <li><a href="#register">Đăng ký</a></li>
+        <li><a href="#examstructure">Đề thi</a></li>
         <li><a href="#prize">Giải thưởng</a></a></li>
         <li><a href="#contact">Liên hệ</a></li>
       </ul>
@@ -78,7 +80,7 @@ buê.</p>
 <div class="container-fluid bg-grey" id="purposes">
   <div class="row slideanim">
     <div class="col-sm-6">
-      <img src="{{asset('imgs/4.jpg')}}" class="img img-responsive" width="100%" height="400px">
+      <img src="{{asset('imgs/purpose.jpg')}}" class="img img-responsive" width="100%" height="400px" style="margin-top:45px;">
     </div>
     <div class="col-sm-6">
       <h2>Mục đích - Ý nghĩa</h2><br>
@@ -153,8 +155,56 @@ của bài thi. Thí sinh được chủ động trong việc đánh giá khả 
   </div>
 </div>
 
+<div id="register" class="container-fluid text-center bg-style no-padding">
+<div class="color-overlay">
+  <h2>Thủ tục đăng ký</h2>
+  <h4>Kỳ thi chỉ dành cho học sinh từ lớp 3 đến lớp 8.</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-8 col-sm-offset-2 text-left">
+    
+             <table class="table yellow-heading">
+        <thead>
+        <th>Tên cấp độ</th>
+        <th text-align="center">Lớp</th>
+        
+        </thead>
+        <tbody>
+          <tr>
+            <td align="left"> <strong>Cấp độ 1 - Middle Primary </strong></td>
+            <td align="left" valign="middle">Lớp 3 - 4</td>
+          
+          </tr>
+           <tr>
+            <td align="left"><strong>Cấp độ 2 - Upper Primary </strong></strong></td>
+            <td align="left" valign="middle">Lớp 5 - 6</td>
+           
+          </tr>
+           <tr>
+            <td align="left"><strong>Cấp độ 3 - Junior Secondary</strong></td>
+            <td align="left" valign="middle">Lớp 7 - 8</td>
+            
+          </tr>
+          
+          
+        </tbody>
+      </table>
+      <span><strong>Thủ tục đăng ký:</strong></span> <a href="{{asset('files/Register_IMAS2017.docx')}}">Phiếu đăng ký</a><br>
+      <span><strong>Thời gian đăng ký:</strong></span> 10/10/2017.<br>
+      <span><strong>Hình thức đăng ký:</strong></span> Đăng ký tại trường thí sinh theo học.<br>
+      <p><strong>Vòng 1:</strong> Các thí sinh đăng ký tham dự và nộp lệ phí vòng 1 tại trường. Các trường tổng hợp
+danh sách từ các lớp và gửi cho BTC. <strong>BTC không nhận đăng ký lẻ</strong>, với trường hợp thí sinh muốn tham gia mà nhà trường không phát động phụ huynh có thể liên hệ với BTC để được hỗ trợ. BTC chỉ nhận đăng ký của
+Trường với số lượng <strong>tối thiểu là 20 học sinh</strong>.</p>
+<p><strong>Vòng 2:</strong> Các thí sinh lọt vào vòng 2 sẽ nhận được thông báo từ BTC.</p>
+<p><strong>Lệ phí thi:</strong> Vòng 1: 250.000đ/thí sinh - Vòng 2: 200.000đ/thí sinh</p>
+
+    </div>
+  
+  </div>
+</div>
+</div>
 <!-- Container (Portfolio Section) -->
-<div id="exam" class="container-fluid text-center bg-grey">
+<div id="examstructure" class="container-fluid text-center">
   <h2>Cấu trúc đề thi</h2><br>
   <h4>Kỳ thi sử dụng <strong>Đề thi bằng tiếng Anh</strong> do Ủy ban điều hành IMAS quốc tế cung cấp.</h4>
   <div class="row text-center slideanim">
@@ -265,7 +315,8 @@ hoàn thành vẫn được cho điểm thành phần</td>
   
 </div>
 
-<div id="prize" class="container-fluid text-center bg-grey">
+<div id="prize" class="container-fluid text-center bg-style no-padding ">
+<div class="color-overlay">
   <h2>Giải thưởng</h2><br>
   <h4>Kết quả bài thi của thí sinh sẽ được thẩm định và phê duyêt bởi Ủy ban điều hành IMAS
 quốc tế. <br>Giải thưởng được xếp theo kết quả thi của thí sinh so với các thí sinh cùng độ tuổi
@@ -360,7 +411,7 @@ từng thí sinh. Các loại chứng nhận bao gồm:</p>
  
   </div>
   
-  
+  </div>
 </div>
 
 
@@ -370,7 +421,7 @@ từng thí sinh. Các loại chứng nhận bao gồm:</p>
   <div class="row">
     <div class="col-sm-5">
       <h3>BAN TỔ CHỨC IMAS VIỆT NAM</h3>
-      <p>Quỹ Phát triển giáo dục IEG</p>
+    
       <p><span class="glyphicon glyphicon-map-marker"></span> 128 Nguyễn Thái Học, Ba Đình, Hà Nội</p>
       <p><span class="glyphicon glyphicon-phone"></span> 0981 048 228/ 04-7109 1099</p>
       <p><span class="glyphicon glyphicon-envelope"></span> imas@ieg.vn</p>
@@ -386,16 +437,7 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5e9ghZ-rNTER_LA-B
   </div>
 </div>
 
-<!-- Add Google Maps -->
 
-
-
-
-
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 
 <footer class="container-fluid text-center">
   <a href="#homepage" title="To Top">
@@ -410,7 +452,7 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
   
 $(document).ready(function(){
   	jQuery(window).on('scroll', function(){'use strict';
-		if ( jQuery(window).scrollTop() > 500 ) {
+		if ( jQuery(window).scrollTop() > 300 ) {
 			jQuery('#masthead').addClass('animated fadeInDown sticky');
 		} else {
 			jQuery('#masthead').removeClass('animated fadeInDown sticky');
@@ -437,7 +479,7 @@ $(document).ready(function(){
       });
     } // End if
   }); */
-  $(".nav li a, footer a[href='#homepage']").click(function(event) {
+  $(".nav li a, footer a[href='#homepage'], navbar-header a[href='#homepage']").click(function(event) {
   		/* Act on the event */
   		var target = $(this).attr('href');
   		$('html, body').animate({

@@ -101,6 +101,10 @@ h4 {
     color: #f4511e;
 }
 
+.text-white {
+    color: #fff !important;
+}
+
 .panel-heading {
     color: #fff !important;
     background-color: #f4511e !important;
@@ -275,6 +279,33 @@ footer .glyphicon {
 .navbar-brand img {
     height: 80px;
     width: 80px;
+}
+
+#register {
+    background-image: url('../imgs/register.jpg')
+}
+
+#prize {
+    background-image: url('../imgs/prize.jpg')
+}
+
+.bg-style {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.color-overlay {
+    background: rgba(252, 138, 0, 0.2);
+    background: -webkit-linear-gradient(to right, rgb(247, 151, 30), rgb(255, 210, 0, 0.9));
+    background: linear-gradient(to right, rgb(247, 151, 30), rgb(255, 210, 0, 0.5));
+    padding: 80px 0px;
 }
 
 #particles-js {
