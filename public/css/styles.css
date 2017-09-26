@@ -3,7 +3,7 @@ body {
     line-height: 1.8;
     color: #222222;
     text-align: justify;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 h2 {
@@ -108,7 +108,7 @@ h4 {
 .panel-heading {
     color: #fff !important;
     background-color: #f4511e !important;
-    padding: 25px;
+    /* padding: 25px; */
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -167,12 +167,14 @@ h4 {
 
 .sticky .navbar-brand img {
     margin-top: -10px;
+    display: block;
 }
 
 .navbar li a,
 .navbar .navbar-brand {
     color: #b61924 !important;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .navbar li {
@@ -272,6 +274,12 @@ footer .glyphicon {
     }
 }
 
+@media screen and (min-width: 900px) {
+    #demo-1 {
+        margin-top: 120px;
+    }
+}
+
 .navbar-brand {
     padding: 0px;
 }
@@ -279,6 +287,7 @@ footer .glyphicon {
 .navbar-brand img {
     height: 80px;
     width: 80px;
+    display: none;
 }
 
 #register {
@@ -301,10 +310,21 @@ footer .glyphicon {
     padding: 0px !important;
 }
 
+
+/* .color-overlay {
+    background: rgba(247, 151, 30, 0.75);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(247, 151, 30, 0.8)), to(rgba(255, 210, 0, 0.8)));
+    background: linear-gradient(to right, rgba(247, 151, 30, 0.8), rgb(255, 210, 0, 0.8));
+    
+} */
+
 .color-overlay {
-    background: rgba(252, 138, 0, 0.2);
-    background: -webkit-linear-gradient(to right, rgb(247, 151, 30), rgb(255, 210, 0, 0.9));
-    background: linear-gradient(to right, rgb(247, 151, 30), rgb(255, 210, 0, 0.5));
+    background: rgba(247, 157, 0, 0.8);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64f38c, #f79d00);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(100, 243, 140, 0.8), rgba(247, 157, 0, 0.8));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 80px 0px;
 }
 
@@ -318,11 +338,20 @@ footer .glyphicon {
     background-repeat: no-repeat;
 }
 
+.text-black {
+    color: #222 !important;
+}
+
+.banner-logo {
+    height: 45vh;
+    width: 45vh;
+}
+
 .page-header-title {
     color: #fff;
     position: absolute;
-    top: 35%;
-    left: 30%;
+    top: 10%;
+    left: 25.5vw;
     background: transparent;
 }
 
@@ -333,9 +362,10 @@ footer .glyphicon {
 
 .page-header-title h4 {
     font-size: 20px;
-    font-style: italic;
+    text-transform: uppercase;
     color: #b61924;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .page-header-title p {

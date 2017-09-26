@@ -14,6 +14,7 @@
   <link href="{{asset('/css/styles.css')}}" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://www.youtube.com/player_api"></script>
  </head> 
 <body id="homepage" data-spy="scroll" data-target=".navbar" data-offset="100">
 
@@ -42,8 +43,10 @@
 </nav>
 <div id="particles-js">
 <div class="text-center page-header-title">
-  <h1>IMAS</h1> 
-  <h4>International Mathematics Assesments for Schools</h4> 
+<img class="banner-logo img img-reponsive" src="{{asset('imgs/logo.png')}}">
+
+  <h4 class="text-black">International Mathematics Assesments for Schools</h4> 
+  <h4>KỲ THI ĐÁNH GIÁ NĂNG LỰC TƯ DUY TOÁN HỌC QUỐC TẾ 2017 – 2018</h4>
   <p>Dành cho học sinh từ lớp 3 đến lớp 8.</p>
  
 </div>
@@ -51,7 +54,7 @@
 
 
 <!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<div id="about" class="container-fluid m-video">
   <div class="row slideanim">
     <div class="col-sm-6">
       <h2>Giới thiệu</h2><br>
@@ -72,12 +75,17 @@ buê.</p>
      
     </div>
     <div class="col-sm-6">
-      <img src="{{asset('imgs/IMG_6481.png')}}" width="100%" height="400px">
+ <div class="youtube-video" 
+     id="demo-1" 
+     data-video-id="Ft53DX0VNdo" 
+     width="560" 
+     height="315"></div>
+</div>
     </div>
   </div>
 </div>
 
-<div class="container-fluid bg-grey" id="purposes">
+{{--  <div class="container-fluid bg-grey" id="purposes">
   <div class="row slideanim">
     <div class="col-sm-6">
       <img src="{{asset('imgs/purpose.jpg')}}" class="img img-responsive" width="100%" height="400px" style="margin-top:45px;">
@@ -102,10 +110,10 @@ của bài thi. Thí sinh được chủ động trong việc đánh giá khả 
       </p>
     </div>
   </div>
-</div>
+</div>  --}}
 
 <!-- Container (Services Section) -->
-<div id="location" class="container-fluid text-center">
+<div id="location" class="container-fluid text-center bg-grey">
   <h2>Thời gian - Địa điểm</h2>
   <h4>Thời gian - địa điểm tổ chức kỳ thi IMAS 2017 được dự kiến như sau:</h4>
   <br>
@@ -426,6 +434,7 @@ từng thí sinh. Các loại chứng nhận bao gồm:</p>
       <p><span class="glyphicon glyphicon-phone"></span> 0981 048 228/ 04-7109 1099</p>
       <p><span class="glyphicon glyphicon-envelope"></span> imas@ieg.vn</p>
       <p><span class="glyphicon glyphicon-globe"></span> <a href="https://www.facebook.com/IMASVietNam/">IMAS Việt Nam Fanpage</a></p>
+      <a href="http://ieg.vn"><img class="img img-responsive" src="{{asset('imgs/ieg_foundation_logo.png')}}" width="200px" height="200px"></a>
     </div>
     <div class="col-sm-7 slideanim">
       <div class="row">
@@ -445,7 +454,24 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5e9ghZ-rNTER_LA-B
   </a>
   <p>Copyrights reserved IEG - <a href="http://ieg.vn/" title="Visit IEG Homepage">ieg.vn</a></p>
 </footer>
+<script src="{{asset('js/jquery.inview.min.js')}}"></script>
+<script src="{{asset('js/jquery.youtube-inview-autoplay.js')}}"></script>
+<script>
+// Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+  function onYouTubeIframeAPIReady() {
+    $('.youtube-video').inViewAutoplay({
+      autohide: 1,
+      modestbranding: 1,
+      rel: 0,
+      quality: 'hd720'
+    });
+  }
+</script>
 <script>
 
 
@@ -486,6 +512,7 @@ $(document).ready(function(){
                     scrollTop: $(target).offset().top - 60
                 }, 2000);
   	});
+  
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
@@ -498,6 +525,7 @@ $(document).ready(function(){
   });
 })
 </script>
+
 <script src="{{asset('/js/particles.min.js')}}"></script>
 <script src="{{asset('/js/app.js')}}"></script>
 
